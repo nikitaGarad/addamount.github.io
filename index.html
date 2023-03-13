@@ -1,0 +1,24 @@
+<!-- Enter the purchase Amount:-
+<input type="number" id="pur_Amt" onkeyup="getDiscount()">
+<br>
+Actual price Amount on 10% dis:
+<input type="number" id="pay_Amt">
+<script type="text/javascript">
+    function getDiscount()
+    {
+    var amt=document.getElementById("pur_Amt").value;
+    var discount=(amt*10)/100;
+    document.getElementById("pay_Amt").value=amt-discount;
+}
+</script> -->
+<button onclick="Add_amount(100)">Add 100</button>
+<button onclick="Add_amount(200)">Add 200</button>
+<button onclick="Add_amount(300)">Add 300</button>
+Amount:
+<h1 id="amount" style="margin-top:0px;">0</h1>
+<script type="text/javascript">
+    function Add_amount(amt)
+    {
+        document.getElementById("amount").innerHTML=Number(document.getElementById("amount").innerHTML)+amt;
+    }
+</script>
